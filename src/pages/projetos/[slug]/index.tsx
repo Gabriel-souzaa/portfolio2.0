@@ -5,6 +5,7 @@ import BannerProjeto from '../../../components/BannerProjeto';
 import Header from '../../../components/Header';
 import { ProjetoContainer } from '../../../styles/ProjetoStyles';
 import LoadingScreen from '../../../components/LoadingScreen';
+import { getProjectBySlug, getSlugs } from '../../../service/projects';
 
 interface IProjeto {
   slug: string;
@@ -55,13 +56,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = [
-    {
-      params: {
-        slug: 'teste'
-      }
-    }
-  ];
+  const paths = getSlugs();
 
   return {
     paths,
@@ -72,16 +67,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async context => {
   const { slug } = context.params;
 
-  const projeto = [
-    {
-      slug,
-      title: 'teste',
-      type: 'teste',
-      description: 'teste',
-      link: 'teste',
-      thumbnail: 'teste'
-    }
-  ];
+  const projeto = getProjectBySlug(slug);
 
   return {
     props: {

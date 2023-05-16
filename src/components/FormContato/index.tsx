@@ -1,5 +1,5 @@
 import SectionTitle from '../SectionTitle';
-import Form from './Form';
+// import Form from './Form';
 import { Container } from './styles';
 
 function FormContato() {
@@ -15,14 +15,14 @@ function FormContato() {
         }
         description={
           <>
-            Preencha o formulário abaixo que
+            Envie um e-mail para gabrielfreitassouzaa@gmail.com
             <br />
             irei retornar em breve
           </>
         }
       />
 
-      <Form />
+      {/* <Form /> */}
     </Container>
   );
 }

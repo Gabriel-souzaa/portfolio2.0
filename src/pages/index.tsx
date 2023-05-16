@@ -12,6 +12,7 @@ import Conhecimentos from '../components/Conhecimentos';
 import FormContato from '../components/FormContato';
 import Footer from '../components/Footer';
 import 'aos/dist/aos.css';
+import { getProjects } from '../service/projects';
 
 interface IProjeto {
   slug: string;
@@ -34,10 +35,10 @@ export default function Home({ projetos }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
-        <title>Home | Meu portfólio</title>
+        <title>Meu portfólio</title>
         <meta
           name="description"
-          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+          content="Sou um desenvolvedor FullStack e aqui apresento alguns projetos desenvolvidos por mim!"
         />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -45,7 +46,7 @@ export default function Home({ projetos }: HomeProps) {
         <meta name="twitter:image:src" content="/ogimage.png" />
         <meta
           property="og:description"
-          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+          content="Sou um desenvolvedor FullStack e aqui apresento alguns projetos desenvolvidos por mim!"
         />
       </Head>
 
@@ -65,16 +66,7 @@ export default function Home({ projetos }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projetos = [
-    {
-      slug: 'teste',
-      title: 'teste',
-      type: 'teste',
-      description: 'teste',
-      link: 'teste',
-      thumbnail: 'teste'
-    }
-  ];
+  const projetos = getProjects();
 
   return {
     props: {

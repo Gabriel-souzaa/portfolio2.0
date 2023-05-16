@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import ProjetoItem from '../../components/ProjetoItem';
 import { ProjetosContainer } from '../../styles/ProjetosStyles';
+import { getProjects } from '../../service/projects';
 
 interface IProjeto {
   slug: string;
@@ -54,32 +55,7 @@ export default function Projetos({ projetos }: ProjetoProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const prismic = getPrismicClient();
-
-  // const projectResponse = await prismic.query(
-  //   [Prismic.Predicates.at('document.type', 'pro')],
-  //   { orderings: '[document.first_publication_date desc]' }
-  // );
-
-  // const projetos = projectResponse.results.map(projeto => ({
-  //   slug: projeto.uid,
-  //   title: projeto.data.title,
-  //   type: projeto.data.type,
-  //   description: projeto.data.description,
-  //   link: projeto.data.link.url,
-  //   thumbnail: projeto.data.thumbnail.url
-  // }));
-
-  const projetos = [
-    {
-      slug: 'teste',
-      title: 'teste',
-      type: 'teste',
-      description: 'teste',
-      link: 'teste',
-      thumbnail: 'teste'
-    }
-  ];
+  const projetos = getProjects();
 
   return {
     props: {
