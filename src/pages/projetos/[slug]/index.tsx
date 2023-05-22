@@ -48,7 +48,9 @@ export default function Projeto({ projeto }: ProjetoProps) {
       <main>
         <p>{projeto.description}</p>
         <button type="button">
-          <a href={projeto.link}>Ver projeto online</a>
+          <a target="_blank" href={projeto.link} rel="noreferrer">
+            Ver projeto no github
+          </a>
         </button>
       </main>
     </ProjetoContainer>
