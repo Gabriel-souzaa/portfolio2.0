@@ -41,8 +41,8 @@ function Experiencias() {
         />
         <ExperienciaItem
           year="2019"
-          title="Suport (Estágio)"
-          company="Freelancer"
+          title="Suporte (Estágio)"
+          company="Business Integrator"
           description="Analista de suporte; Atendimento ao usuário; Consultas e análises utilizando o banco SQL server. Relatórios com base nas consultas do banco;"
         />
       </section>

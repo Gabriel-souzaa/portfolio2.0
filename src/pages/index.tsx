@@ -48,6 +48,7 @@ export default function Home({ projetos }: HomeProps) {
           property="og:description"
           content="Sou um desenvolvedor FullStack e aqui apresento alguns projetos desenvolvidos por mim!"
         />
+        <link rel="icon" href="/portifolioLogo.ico" />
       </Head>
 
       <Header />
