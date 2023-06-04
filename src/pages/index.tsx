@@ -40,10 +40,10 @@ export default function Home({ projetos }: HomeProps) {
           name="description"
           content="Sou um desenvolvedor FullStack e aqui apresento alguns projetos desenvolvidos por mim!"
         />
-        <meta property="og:image" content="/ogimage.png" />
-        <meta property="og:image:secure_url" content="/ogimage.png" />
-        <meta name="twitter:image" content="/ogimage.png" />
-        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta property="og:image" content="/ori.png" />
+        <meta property="og:image:secure_url" content="/ori.png" />
+        <meta name="twitter:image" content="/ori.png" />
+        <meta name="twitter:image:src" content="/ori.png" />
         <meta
           property="og:description"
           content="Sou um desenvolvedor FullStack e aqui apresento alguns projetos desenvolvidos por mim!"
